@@ -5,6 +5,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://hotw.eventickets.ie'),
   title: 'Hell of the West Triathlon - 40th Anniversary | Kilkee, Co. Clare',
   description: 'Join us for the 40th running of Hell of the West Triathlon in beautiful Kilkee, Co. Clare. Ireland\'s most challenging triathlon on the dramatic Atlantic coastline.',
   keywords: 'triathlon, Hell of the West, Kilkee, Clare, Ireland, swimming, cycling, running, Atlantic, 40th anniversary',

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import AthleteShowcase from '@/components/AthleteShowcase';
+import InterestCaptureForm from '@/components/InterestCaptureForm';
 
 export default function HomePage() {
   const [timeLeft, setTimeLeft] = useState({
@@ -39,15 +40,21 @@ export default function HomePage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="text-white text-xl font-bold">
-              Hell of the West
-            </div>
+			<div className="flex items-center">
+				<Image
+					src="/images/logos/Limerick-logo_2.png"
+					alt="Limerick Triathlon Club"
+					width={90}
+					height={20}
+					priority
+				/>
+			</div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#about" className="text-white hover:text-orange-400 transition-colors duration-300">About</a>
+              {/* <a href="#about" className="text-white hover:text-orange-400 transition-colors duration-300">About</a> */}
               <a href="#register" className="text-white hover:text-orange-400 transition-colors duration-300">Register</a>
-              <a href="#course" className="text-white hover:text-orange-400 transition-colors duration-300">Course</a>
-              <a href="#40th" className="text-white hover:text-orange-400 transition-colors duration-300">40th Anniversary</a>
-              <a href="#contact" className="text-white hover:text-orange-400 transition-colors duration-300">Contact</a>
+              <a href="course" className="text-white hover:text-orange-400 transition-colors duration-300">Course</a>
+              <a href="#accommodation" className="text-white hover:text-orange-400 transition-colors duration-300">Accommodation</a>
+              {/* <a href="#contact" className="text-white hover:text-orange-400 transition-colors duration-300">Contact</a> */}
             </nav>
           </div>
         </div>
@@ -78,19 +85,10 @@ export default function HomePage() {
             Hell of the <span className="text-orange-400">West</span>
           </h1>
           <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto">
-            Experience Ireland&apos;s most challenging triathlon on the dramatic Atlantic coastline of Kilkee, Co. Clare
+            Join 40 Years of Hell of the West Warriors <br /><br />
+            Experience Ireland&apos;s most challenging triathlon on the dramatic Atlantic coastline of Kilkee, Co. Clare and
+            earn your place among the legends who&apos;ve conquered Ireland&apos;s ultimate triathlon gauntlet
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => window.open('https://eventickets.ie/events/hell-of-west-2025', '_blank')}
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105"
-            >
-              Register Now
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300">
-              Learn More
-            </button>
-          </div>
         </div>
 
         {/* Scroll indicator */}
@@ -104,13 +102,13 @@ export default function HomePage() {
       {/* Key Information Bar */}
       <section className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
             
             {/* Event Date */}
             <div className="flex flex-col items-center">
               <div className="text-orange-400 text-2xl mb-2">📅</div>
               <h3 className="font-semibold text-lg mb-1">Event Date</h3>
-              <p className="text-gray-300">August 15, 2025</p>
+              <p className="text-gray-300">TBD, 2026</p>
             </div>
 
             {/* Location */}
@@ -123,11 +121,11 @@ export default function HomePage() {
             {/* Registration Status */}
             <div className="flex flex-col items-center">
               <div className="text-orange-400 text-2xl mb-2">✅</div>
-              <h3 className="font-semibold text-lg mb-1">Registration</h3>
+              <h3 className="font-semibold text-lg mb-1">Register Interest</h3>
               <p className="text-green-400 font-semibold">OPEN</p>
             </div>
 
-            {/* Countdown */}
+            {/* Countdown 
             <div className="flex flex-col items-center">
               <div className="text-orange-400 text-2xl mb-2">⏰</div>
               <h3 className="font-semibold text-lg mb-1">Countdown</h3>
@@ -138,6 +136,8 @@ export default function HomePage() {
                 <span className="bg-orange-500 px-2 py-1 rounded">{timeLeft.seconds}s</span>
               </div>
             </div>
+            
+            */}
 
           </div>
         </div>
@@ -162,6 +162,13 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+		<div className="flex flex-col sm:flex-row gap-4 justify-center">
+				<section id="register" className="py-16 bg-white scroll-mt-24">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <InterestCaptureForm />
+                  </div>
+              </section>
+            </div>
     </>
   );
 }

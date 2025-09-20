@@ -15,7 +15,7 @@ interface CourseMapProps {
   highlights: string[];
 }
 
-const courseData = {
+const courseData: Record<'swim' | 'bike' | 'run', CourseMapProps> = {
     swim: {
         title: "Swim Course - Kilkee Bay",
         distance: "1.5km",
@@ -152,7 +152,7 @@ export default function CoursePage() {
             Hell of the West <span className="text-orange-400">Course</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the challenging course that has tested athletes for 40 years on Ireland's Wild Atlantic Way
+            Discover the challenging course that has tested athletes for 40 years on Ireland&apos;s Wild Atlantic Way
           </p>
         </div>
       </section>

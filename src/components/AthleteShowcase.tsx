@@ -321,10 +321,17 @@ export default function AthleteCarousel({
                   Ready to join the legends? Register now for Hell of the West 2025
                 </p>
                 <button 
-                  onClick={() => window.open('https://eventickets.ie/events/hell-of-west-2025', '_blank')}
+                  onClick={() => {
+                    const el = document.getElementById('register');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                      window.location.href = '/#register';
+                    }
+                  }}
                   className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
-                  Register for 2025
+                  Register Interest
                 </button>
               </div>
             </div>

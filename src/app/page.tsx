@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import AthleteShowcase from '@/components/AthleteShowcase';
-import InterestCaptureForm from '@/components/InterestCaptureForm';
 
 export default function HomePage() {
   const [timeLeft, setTimeLeft] = useState({
@@ -65,7 +64,7 @@ export default function HomePage() {
         {/* Background Image - Replace with actual Kilkee coastline image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/kilkee-coastline.jpg" // Add your Kilkee image here
+            src="/images/Killkee_bay.jpg" // Add your Kilkee image here
             alt="Kilkee Coastline - Hell of the West Triathlon"
             fill
             className="object-cover"
@@ -108,7 +107,7 @@ export default function HomePage() {
             <div className="flex flex-col items-center">
               <div className="text-orange-400 text-2xl mb-2">📅</div>
               <h3 className="font-semibold text-lg mb-1">Event Date</h3>
-              <p className="text-gray-300">TBD, 2026</p>
+              <p className="text-gray-300">4th July, 2026</p>
             </div>
 
             {/* Location */}
@@ -121,11 +120,11 @@ export default function HomePage() {
             {/* Registration Status */}
             <div className="flex flex-col items-center">
               <div className="text-orange-400 text-2xl mb-2">✅</div>
-              <h3 className="font-semibold text-lg mb-1">Register Interest</h3>
+              <h3 className="font-semibold text-lg mb-1">Register for the race</h3>
               <p className="text-green-400 font-semibold">OPEN</p>
             </div>
 
-            {/* Countdown 
+            {/* Countdown Timer */}
             <div className="flex flex-col items-center">
               <div className="text-orange-400 text-2xl mb-2">⏰</div>
               <h3 className="font-semibold text-lg mb-1">Countdown</h3>
@@ -137,7 +136,6 @@ export default function HomePage() {
               </div>
             </div>
             
-            */}
 
           </div>
         </div>
@@ -165,7 +163,22 @@ export default function HomePage() {
 		<div className="flex flex-col sm:flex-row gap-4 justify-center">
 				<section id="register" className="py-16 bg-white scroll-mt-24">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <InterestCaptureForm />
+                    <div className="text-center">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3">Registration</h3>
+                      <p className="text-gray-600 mb-6">
+                        Register for Kilkee Hell of the West via SportsTiming
+                      </p>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a
+                          href="https://in.register-sportstiming.ie/kilkee-hell-of-the-west-2026?currentPage=select-competition"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                        >
+                          Register Now
+                        </a>
+                      </div>
+                    </div>
                   </div>
               </section>
             </div>

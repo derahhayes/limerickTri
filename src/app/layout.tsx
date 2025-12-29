@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: 'Hell of the West Triathlon',
     images: [
       {
-        url: '/images/kilkee-coastline.jpg',
+        url: '/images/Killkee_bay.jpg',
         width: 1200,
         height: 630,
         alt: 'Kilkee Coastline - Hell of the West Triathlon',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Hell of the West Triathlon - 40th Anniversary',
     description: 'Experience Ireland\'s most challenging triathlon on the dramatic Atlantic coastline of Kilkee, Co. Clare',
-    images: ['/images/kilkee-coastline.jpg'],
+    images: ['/images/Killkee_bay.jpg'],
   },
 };
 

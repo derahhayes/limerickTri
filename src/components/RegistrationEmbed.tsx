@@ -39,7 +39,7 @@ export default function RegistrationEmbed({
         {embedState === 'failed' && (
           <div className="p-6 text-center">
             <p className="text-gray-300 mb-4">
-              We couldn't display the registration form here. Some sites block embedding in other pages.
+              We couldn&apos;t display the registration form here. Some sites block embedding in other pages.
             </p>
           </div>
         )}
